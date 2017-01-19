@@ -6,10 +6,10 @@ const client = new Discord.Client();
 const prefix = "-"
 
 //edit the server here
-const server = "Nights Of Valor"
+const server = "da Vinci"
 
 //invite link
-const invitelink = "https://discord.gg/4suNThV"
+const invitelink = "undefined (err)"
 
 const n1 = "weareno1 "
 var newUsers = new Discord.Collection();
@@ -83,7 +83,7 @@ exports.help = {
 // lol
 client.on('guildMemberAdd', member => {
   let guild = member.guild;
-  guild.defaultChannel.sendMessage(`Please welcome **${member.user.username}** to the **${msg.guild.name}**!`);
+  guild.defaultChannel.sendMessage(`Please welcome **${member.user.username}** to **${msg.guild.name}**!`);
 });
 client.on('guildMemberRemove', member => {
   let guild = member.guild;
@@ -205,7 +205,7 @@ client.on('message', msg => {
                  name: "User Info For ${username}.",
                 icon_url: "https://mcapi.ca/avatar/${username}"
             },
-            description: "Bot Statistics... What do You Expect?",
+            description: "User Icon Finder",
         }});
 }
 /*
@@ -230,26 +230,6 @@ if (msg.content.startsWith(prefix + "skinstealer")) {
     msg.channel.sendMessage(Math.floor((pro) - (pro2)) + ", " + msg.author.username + "!");
   if (what === "")
     msg.channel.sendMessage("Please Enter Your Method. (Example: `-calculator m 1 1` `m` for multiplication, 1 1 for `1x1`.)");
-
-
-
-
-
-}
-  if (msg.content.startsWith(prefix + 'airhorn'))
-    msg.member.voiceChannel.join()
-     .then(connection => {
-       msg.channel.sendMessage(':arrow_forward: Playing `Airhorn Sound`')
-       connection.playFile('./Audio/airhorn.mp3')
-       client.setTimeout(1)
-     })
- .catch(console.error);
-
-
-
-  if (msg.content.startsWith(prefix + "purge")) {
-    msg.reply('???')
-    msg.author.sweepMessages(100)
 }
   if (msg.content.startsWith(prefix + 'botstats'))
     msg.channel.sendMessage(" ", {embed: {
@@ -309,7 +289,7 @@ if (msg.content.startsWith(prefix + "skinstealer")) {
 //emojis
   if (msg.content.startsWith(prefix + "2flip")) 
     // Replys With Msg
-    msg.channel.sendMessage('┻━┻ ︵ヽ(`Д´)ﾉ︵﻿ ┻━┻');
+    msg.channel.sendMessage('┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻');
   if (msg.content.startsWith(prefix + "lenny")) 
     // Replys With Msg
     msg.channel.sendMessage('( ͡° ͜ʖ ͡°)');
@@ -488,7 +468,7 @@ if (msg.content.startsWith(prefix + "skinstealer")) {
     msg.channel.sendMessage(":heart: The Best Developer! :heart: *that won't tell me how to color message.* (╯°□°）╯︵ ┻━┻");
   if (msg.content.startsWith("(╯°□°）╯︵ ┻━┻")) 
     // Replys With Msg
-    msg.channel.sendMessage('┬─┬﻿ ノ( ゜-゜ノ)');
+    msg.channel.sendMessage('┬─┬ ノ( ゜-゜ノ)');
   if (msg.content.startsWith("Mmmm")) 
     // Replys With Msg
     msg.channel.sendMessage('Player HelloImJake Detected.');
