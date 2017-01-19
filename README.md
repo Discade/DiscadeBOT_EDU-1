@@ -1,5 +1,5 @@
 # Discade for Education
-*https://github.com/Discade/DiscadeBOT_EDU-1*
+#####*https://github.com/Discade/DiscadeBOT_EDU-1*
 Discade for Education: A foward bot for schools who want __Better Communitcations__.
 
 # Dependencies
