@@ -1,4 +1,5 @@
 /*Constants*/
+const clienttoken = '<enter your amazing token here!>';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "-"
@@ -100,7 +101,8 @@ client.on('message', msg => {
 
             ]
         }});
-
+  if (msg.content.startsWith(""))
+    
   if (msg.content.startsWith(prefix + "mc-user")) {
   let [username] = msg.content.split(" ").slice(1);
     msg.channel.sendMessage(" ", {embed: {
@@ -156,3 +158,8 @@ client.on("message", message => {
   }
   fs.writeFile('./points.json', JSON.stringify(points), (err) => {if(err) console.error(err)});
 });
+/*Permissions:
+ *https://eslachance.gitbooks.io/discord-js-bot-guide/content/coding-walkthroughs/understanding_roles.html
+ *http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_includes2
+ */
+client.login(clienttoken)
